@@ -1,0 +1,289 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'ZPoC Revolution'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object TopToolBar: TToolBar
+    Anchors = []
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBarLabel: TLabel
+      Action = TitleAction
+      Align = Contents
+      Enabled = True
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'ZPoC Revolution'
+    end
+    object btnBack: TSpeedButton
+      Align = MostLeft
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      Text = 'Sair'
+      Visible = False
+      OnClick = btnBackClick
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 416.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = None
+    Sizes = (
+      384s
+      416s
+      384s
+      416s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Conectado em SALA 1'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object grdSalas: TGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Size.Width = 384.000000000000000000
+        Size.Height = 416.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+        OnCellDblClick = grdSalasCellDblClick
+        Viewport.Width = 364.000000000000000000
+        Viewport.Height = 391.000000000000000000
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      Enabled = False
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Caption Tab Item #2'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object lbChat: TListBox
+        Align = Top
+        Enabled = False
+        Size.Width = 384.000000000000000000
+        Size.Height = 250.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 380.000000000000000000
+        Viewport.Height = 246.000000000000000000
+      end
+      object Panel1: TPanel
+        Align = Top
+        Position.Y = 258.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object edtMensagem: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 0
+          Enabled = False
+          Size.Width = 311.000000000000000000
+          Size.Height = 31.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object btnEnviar: TButton
+          Align = Right
+          Enabled = False
+          Position.X = 311.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 31.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Enviar'
+          OnClick = btnEnviarClick
+        end
+      end
+      object Panel2: TPanel
+        Align = Top
+        Position.Y = 250.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+  end
+  object BottomToolBar: TToolBar
+    Align = Bottom
+    Anchors = [akLeft]
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 2
+    object lblStatus: TLabel
+      Align = Client
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.HorzAlign = Center
+      TabOrder = 4
+    end
+  end
+  object pnlConexaoManual: TPanel
+    Align = Bottom
+    Position.Y = 464.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 55.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    object edtConexaoManual: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Size.Width = 296.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edtPorta: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Right
+      TabOrder = 0
+      Position.X = 296.000000000000000000
+      Size.Width = 88.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object btnConectar: TButton
+      Align = Bottom
+      Position.Y = 24.000000000000000000
+      Size.Width = 384.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Conex'#227'o Manual'
+    end
+  end
+  object ActionList: TActionList
+    Left = 176
+    Top = 56
+    object Sair: TPreviousTabAction
+      Category = 'Tab'
+      TabControl = TabControl1
+      ShortCut = 137
+    end
+    object Sala: TNextTabAction
+      Category = 'Tab'
+      TabControl = TabControl1
+      CustomText = 'SALA'
+    end
+    object TitleAction: TControlAction
+      Category = 'Tab'
+      Text = 'TitleAction'
+      OnUpdate = TitleActionUpdate
+    end
+  end
+  object fdmCDSalas: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 239
+    Top = 216
+    object fdmCDSalasnome: TStringField
+      DisplayLabel = 'Nome'
+      DisplayWidth = 140
+      FieldName = 'nome'
+      Size = 15
+    end
+    object fdmCDSalasendereco: TStringField
+      DisplayLabel = 'Endere'#231'o'
+      DisplayWidth = 140
+      FieldName = 'endereco'
+      Size = 60
+    end
+    object fdmCDSalasporta: TIntegerField
+      DisplayLabel = 'Porta'
+      DisplayWidth = 20
+      FieldName = 'porta'
+    end
+    object fdmCDSalasusuario: TStringField
+      FieldName = 'usuario'
+      Size = 30
+    end
+    object fdmCDSalassenha: TStringField
+      FieldName = 'senha'
+      Size = 30
+    end
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = grdSalas
+      Columns = <
+        item
+          MemberName = 'nome'
+          Width = 100
+        end
+        item
+          MemberName = 'endereco'
+          Width = 150
+        end
+        item
+          MemberName = 'porta'
+          Width = 50
+        end>
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = fdmCDSalas
+    ScopeMappings = <>
+    Left = 176
+    Top = 272
+  end
+end
